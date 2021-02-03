@@ -1,0 +1,41 @@
+name: Scrape latest data
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '32 19 * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out this repo
+      uses: actions/checkout@v2
+    - name: Fetch latest data
+      run: |-
+        curl 'https://www.mainlinehealth.org/conditions-and-treatments/conditions/covid-19?$(date +%s)' \
+          -H 'Connection: keep-alive' \
+          -H 'Pragma: no-cache' \
+          -H 'Cache-Control: no-cache' \
+          -H 'sec-ch-ua: "Google Chrome";v="87", " Not;A Brand";v="99", "Chromium";v="87"' \
+          -H 'sec-ch-ua-mobile: ?0' \
+          -H 'Upgrade-Insecure-Requests: 1' \
+          -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36' \
+          -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+          -H 'Sec-Fetch-Site: cross-site' \
+          -H 'Sec-Fetch-Mode: navigate' \
+          -H 'Sec-Fetch-User: ?1' \
+          -H 'Sec-Fetch-Dest: document' \
+          -H 'Accept-Language: en-US,en;q=0.9' \
+          -H 'dnt: 1' \
+          -H 'sec-gpc: 1' \
+          --compressed > page.html
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
