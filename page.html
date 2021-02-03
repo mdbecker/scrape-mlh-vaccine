@@ -1,0 +1,1086 @@
+
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"98c2f50310","applicationID":"28356942","transactionName":"NQAGYENYXkUCAhBcXgxKM1FTSVFRBk4nWl8GDBBdXlcQcgYVBVxd","queueTime":0,"applicationTime":578,"ttGuid":"AF02FDEAAAAA3DCA","agent":"","sslForHttp":"true"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUDWF5aDBACXFJXAQgDVA==",licenseKey:"98c2f50310",applicationID:"28356942"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(23),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1194.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(24),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Care and Resources | Main Line Health | Philadelphia, Pennsylvania</title>
+    <meta name="description" content="At Main Line Health, we are closely following the latest information and updates from the Centers for Disease Control and Prevention (CDC) and are committed to providing our patients, staff and community with up-to-date information about the COVID-19 outbreak in our region and how our hospitals are responding." />
+    
+    <link rel="shortcut icon" href="/-/media/images/global/favicon.ico" />
+    <link href="/dist/css/index-generated.css" rel="stylesheet" type="text/css" />
+    <script src="/js/vendor/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Google Tag Manager //-->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+        );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NSXXS5');
+    </script>
+    <!-- End Google Tag Manager //-->
+
+    <script src="/js/modernizr.min.js"></script>
+    <script type="application/ld+json">
+				{
+				  "@context" : "http://schema.org",
+				  "@type" : "Organization",
+				  "legalName" : "Main Line Health",
+				  "url" : "https://www.mainlinehealth.org",
+				  "contactPoint" : [{
+					"@type" : "ContactPoint",
+					"telephone" : "tel:+18662255654",
+					"contactType" : "appointments"
+				  }],
+				  "logo" : "https://www.mainlinehealth.org/-/media/images/global/2020/logolarge2020.png",
+				  "sameAs" : [ ]
+				}
+				</script>
+    <script type="application/ld+json">
+                {
+				"@context": "http://schema.org",
+				"@type": "WebSite",
+				"url": "https://www.mainlinehealth.org",
+				"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://www.mainlinehealth.org/search?keyword={search_term}",
+				"query-input": "required name=search_term"
+				}
+			}
+            </script> 
+    
+
+    <!-- Open Graph //-->
+    
+    <meta property="og:title" content="COVID-19 Care and Resources | Main Line Health | Philadelphia, Pennsylvania" />
+                    <meta property = "og:type" content = "website" />
+                    <meta property = "og:url" content = "https://www.mainlinehealth.org/conditions-and-treatments/conditions/covid-19" />
+                    <meta property = "og:description" content = "At Main Line Health, we are closely following the latest information and updates from the Centers for Disease Control and Prevention (CDC) and are committed to providing our patients, staff and community with up-to-date information about the COVID-19 outbreak in our region and how our hospitals are responding." />
+                    <meta property = "og:site_name" content = "Main Line Health" />
+                    <meta property = "og:image" content = "https://www.mainlinehealth.org/-/media/images/global/2020/logolarge2020.png" />
+
+    <!-- Twitter Cards //-->
+    <meta name="twitter:card" content="summary_large_image">
+                    <meta name="twitter:site" content="@mainlinehealth" />
+                    <meta name="twitter:title" content="COVID-19 Care and Resources | Main Line Health | Philadelphia, Pennsylvania" />
+                    <meta name="twitter:description" content="At Main Line Health, we are closely following the latest information and updates from the Centers for Disease Control and Prevention (CDC) and are committed to providing our patients, staff and community with up-to-date information about the COVID-19 outbreak in our region and how our hospitals are responding." />
+                    <meta name="twitter:image" content="https://www.mainlinehealth.org/-/media/images/global/2020/logolarge2020.png" /> 
+
+    <!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="COVID-19 Care and Resources">
+<meta itemprop="description" content="At Main Line Health, we are closely following the latest information and updates from the Centers for Disease Control and Prevention (CDC) and are committed to providing our patients, staff and community with up-to-date information about the COVID-19 outbreak in our region and how our hospitals are responding.">
+<meta itemprop="image" content="https://www.mainlinehealth.org/-/media/images/global/2020/logolarge2020.png"> 
+    
+    <!--[if lte IE 8 ]>
+        <script src="/js/es5-shim.min.js"></script>
+        <script src="/js/es5-sham.min.js"></script>
+    <![endif]//-->
+        <script>
+			var googleApiKey = "AIzaSyCex16JtJKuoW9YPvTVllH7hPE5GmWLL_U";
+        </script>
+    <link rel="stylesheet" href="https://use.typekit.net/ywm6abi.css">
+    <script type="text/javascript">
+        window.videoCompatibleList = [
+            ['ie', '11'],
+            ['edge', '15'],
+            ['safari', '5'],
+            ['firefox', '70'],
+            ['chrome', '74'],
+            ['ios', '10'],
+            ['opera', '68']
+        ];
+
+        navigator.browserInfo= (function(){
+            var ua= navigator.userAgent, tem, 
+            M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+            if(/trident/i.test(M[1])){
+                tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+                return 'IE '+(tem[1] || '');
+            }
+            if(M[1].toUpperCase()=== 'CHROME'){
+                tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+                if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+            }
+            M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+            if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+            return M.join(' ');
+        })();
+
+        function checkIfBrowserExists(browserInfo) {
+            var _browser = browserInfo.split(" ");
+            var count = videoCompatibleList.length;
+            for (var i = 0; i < count; i++) {
+                if (videoCompatibleList[i][0].toUpperCase() === _browser[0].toUpperCase()) {
+                    // check for version
+                    var currentBrowserMajorVersion = _browser[1].split(".")[0];
+                    if (parseInt(videoCompatibleList[i][1]) <= parseInt(currentBrowserMajorVersion)) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        function isSocialMediaApp() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
+        }
+
+        console.log(navigator.browserInfo);
+        console.log("Browser accepted: " + checkIfBrowserExists(navigator.browserInfo));
+        console.log("isSocialMediaApp = " + isSocialMediaApp());
+
+        if (!checkIfBrowserExists(navigator.browserInfo)) {
+            if (!isSocialMediaApp()) {
+                location.href = "/browserUpgrade.htm";
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body class="">
+    <!-- Google Tag Manager (noscript) //-->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSXXS5"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) //-->
+
+    <div id="privacyModal" class="modal">
+
+        <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="btnClose">&times;</span>
+                <button class="accept" id="btnAccept">Accept</button>
+                <p><p style="margin-top: -6px;">
+Our website uses cookies to deliver an improved browser experience. To learn more, please visit our <a href="/about/policies/web-privacy-statement">Privacy Policy</a>. 
+</p></p>
+            </div>
+    </div>
+
+    <!-- Health Bot //-->
+    <div id="healthBotModal" class="nobg-modal">
+        <span class="close" id="healthBotModal-btnClose">&times;</span>
+        <iframe id="healthbotIframe"></iframe>
+    </div>
+
+    <div class="site-bg-overlay">
+        <div id="vdoPlaceHolder"></div>
+    </div>
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools //-->
+        <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5453b7ec12866cbb" async="async"></script>
+    <div class="site-wrapper">
+        <div class="site-wrapper__notification">
+            
+    <div class="notification-banner" style="background-color:#ff7900 ;">
+
+        <text><div style="padding: 15px;"><a href="/conditions-and-treatments/conditions/covid-19" style="font-size: 1.3em;"><span class="fa fa-bell" style="color: white;"></span> <span style="color: white;">Click here for more information about COVID vaccinations at Main Line Health. </span></a></div></text>
+        <div class="js-alert-close notification-banner__close">×</div>
+    </div>
+
+
+
+        </div>
+        <div class="site-wrapper__content">
+            <div class="site-wrapper__header">
+    
+    
+<header role="banner">
+        <div class="site-header--thincrustNavigation" style="background-color:#595959;">
+            <ul style="float: Right">
+                            <li>
+<a href='/careers' title='Careers' style='color: #FFFFFF;' >                                    Careers
+</a>                            </li>
+                            <li style="color: #FFFFFF;">|</li>
+                            <li>
+<a href='/ways-to-give' title='Giving' style='color: #FFFFFF;' >                                    Giving
+</a>                            </li>
+                            <li style="color: #FFFFFF;">|</li>
+                            <li>
+<a href='/research' title='Research' style='color: #FFFFFF;' >                                    Research
+</a>                            </li>
+                            <li style="color: #FFFFFF;">|</li>
+
+            </ul>
+        </div>
+    <div class="site-header site-header--large" >
+        <div class="site-header__wrap">
+            <div class="site-header--logo">
+                <a title="Main Line Health - Well Ahead" href="/"><img src='/-/media/images/global/2020/logolarge2020.png?h=38&amp;w=245&amp;la=en&amp;hash=F111EB5DECE49D506526AD5F350C579BEC929534' alt='Main Line Health' /></a>
+            </div>
+            <div class="site-header--navs">
+                <nav class="site-header--nav">
+                    <ul>
+
+                                <li>
+                                    <a href="#tab1" class="header-search-app" title="Find a Doctor">Find a Doctor</a>
+                                </li>
+                                <li>
+                                    <a href="#tab2" class="header-search-app" title="Hospitals &amp; Locations">Hospitals &amp; Locations</a>
+                                </li>
+                                <li>
+                                    <a href="#tab3" class="header-search-app" title="Specialties">Specialties</a>
+                                </li>
+                                <li>
+                                    <a href="#tab4" class="header-search-app" title="Conditions &amp; Treatments">Conditions &amp; Treatments</a>
+                                </li>
+                        <li>
+                            <a href="#js-header-bar-id" class="search header-search-app" title="Search">
+                                <div class="custom-searchIcon"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                
+
+<div class="site-header--buttons">
+    <ul>
+        <li>
+            <a href='/patient-services' class='button button--secondary' title='PATIENT SERVICES' >PATIENT SERVICES</a>
+        </li>
+        <li>
+            <a class="button button--appointment" href="#tab6" title="MAKE AN APPOINTMENT">MAKE AN APPOINTMENT</a>
+        </li>
+    </ul>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <div class="site-header__dropdowns">
+            <div id="js-content-types"
+                 data-content-types-backend="[{&quot;Key&quot;:&quot;37a36bf1-32be-4546-9292-961dc95d47d8&quot;,&quot;Value&quot;:&quot;Providers&quot;},{&quot;Key&quot;:&quot;313c11f9-a4cc-491f-8b90-1a09517484c5&quot;,&quot;Value&quot;:&quot;Locations&quot;},{&quot;Key&quot;:&quot;dfecb454-6288-4b66-945f-d057f1193034&quot;,&quot;Value&quot;:&quot;Specialties&quot;},{&quot;Key&quot;:&quot;1b7a4134-1a26-488c-bbf0-8084d2a7719b&quot;,&quot;Value&quot;:&quot;Conditions&quot;},{&quot;Key&quot;:&quot;e72ad7f2-d3c3-406e-b216-9f95ca7029f6&quot;,&quot;Value&quot;:&quot;Events&quot;},{&quot;Key&quot;:&quot;c724518b-be22-4150-b887-1ab576ef5652&quot;,&quot;Value&quot;:&quot;News &amp; Blog&quot;},{&quot;Key&quot;:&quot;127b96ba-01dd-4c2e-a186-782083ca7120&quot;,&quot;Value&quot;:&quot;Research&quot;},{&quot;Key&quot;:&quot;5d967ef1-5eae-4e2c-939b-ee893f06529d&quot;,&quot;Value&quot;:&quot;General content&quot;}]"
+                 data-content-types-frontend="[{&quot;Key&quot;:&quot;{AEFE636A-C92C-4641-956D-B67419C62015}|{ED0BADE0-2285-4A91-9368-4C510D78C734}&quot;,&quot;Value&quot;:&quot;Providers&quot;},{&quot;Key&quot;:&quot;{7DEA9594-DFDB-47C9-BCAA-E8241F18091F}|{246369A7-BE62-47DA-87DA-4FFB1AD9C7F1} &quot;,&quot;Value&quot;:&quot;Locations&quot;},{&quot;Key&quot;:&quot;{14CA8E87-C234-4039-BCAD-FC2F39CBAC33}|{32DAC07D-49C5-4B39-8461-A3CFC0DDFE2F}&quot;,&quot;Value&quot;:&quot;Specialties&quot;},{&quot;Key&quot;:&quot;{801ADBBA-AF7F-4A62-8919-DEFB282DA5DE}|{7AE20D79-B7FD-4BEC-8C82-C69E59F9F192}&quot;,&quot;Value&quot;:&quot;Conditions&quot;},{&quot;Key&quot;:&quot;{8A31D911-B69C-463F-AF6E-910B478999E1}&quot;,&quot;Value&quot;:&quot;Events&quot;},{&quot;Key&quot;:&quot;{3461EDAC-406A-4FA0-BA7F-95C91BFE3581}|{71D3856A-8CF0-4BE0-BA67-27A3AB85D480}&quot;,&quot;Value&quot;:&quot;News &amp; Blog&quot;},{&quot;Key&quot;:&quot;{27BB7999-8968-49A3-8FAA-50109652C7CA}|{B179D984-D2E7-4266-AE9E-9A20171F931E}&quot;,&quot;Value&quot;:&quot;Research&quot;},{&quot;Key&quot;:&quot;{50E90484-2DD9-45F3-AC3D-326D69522D7F}|{9F45F030-EA8C-492B-A7D0-3BD47DF986AF}&quot;,&quot;Value&quot;:&quot;General content&quot;}]"></div>
+
+                <div id="tab1" class="site-header__dropdowns__item">
+                    <div class="container">
+    <div class="dropdown__text">
+        <h3 class="dropdown__text__title">Our Doctors</h3>
+        <p>Find the expert care you need and get connected to a Main Line Health physician. We have specialists available for appointments and serving locations throughout the region.</p>
+        <br/>
+        <div class="nrc_overall_reviews_stat">
+            <div class="ds-summary overallReview" data-ds-view="org"></div>
+        </div>
+    </div>
+    <div class="dropdown__filters">
+        <div class="js-mega-menu"
+             data-search-link="/find-a-doctor"
+             data-search-endpoint="GetDoctors"
+             data-keyword-label="Find providers by specialty or service"
+             data-keyword-placeholder="Search by Keyword"
+             data-view-label="View All"></div>
+
+
+
+
+        <div class="dropdown__wrap">
+            <span class="label">Browse physicians by last name</span>
+            <ul class="filter__browse">
+                <li><a href="/find-a-doctor?letter=A&page=1">A</a></li>
+                <li><a href="/find-a-doctor?letter=B&page=1">B</a></li>
+                <li><a href="/find-a-doctor?letter=C&page=1">C</a></li>
+                <li><a href="/find-a-doctor?letter=D&page=1">D</a></li>
+                <li><a href="/find-a-doctor?letter=E&page=1">E</a></li>
+                <li><a href="/find-a-doctor?letter=F&page=1">F</a></li>
+                <li><a href="/find-a-doctor?letter=G&page=1">G</a></li>
+                <li><a href="/find-a-doctor?letter=H&page=1">H</a></li>
+                <li><a href="/find-a-doctor?letter=I&page=1">I</a></li>
+                <li><a href="/find-a-doctor?letter=J&page=1">J</a></li>
+                <li><a href="/find-a-doctor?letter=K&page=1">K</a></li>
+                <li><a href="/find-a-doctor?letter=L&page=1">L</a></li>
+                <li><a href="/find-a-doctor?letter=M&page=1">M</a></li>
+                <li><a href="/find-a-doctor?letter=N&page=1">N</a></li>
+                <li><a href="/find-a-doctor?letter=O&page=1">O</a></li>
+                <li><a href="/find-a-doctor?letter=P&page=1">P</a></li>
+                <li><a href="/find-a-doctor?letter=Q&page=1">Q</a></li>
+                <li><a href="/find-a-doctor?letter=R&page=1">R</a></li>
+                <li><a href="/find-a-doctor?letter=S&page=1">S</a></li>
+                <li><a href="/find-a-doctor?letter=T&page=1">T</a></li>
+                <li><a href="/find-a-doctor?letter=U&page=1">U</a></li>
+                <li><a href="/find-a-doctor?letter=V&page=1">V</a></li>
+                <li><a href="/find-a-doctor?letter=W&page=1">W</a></li>
+                <li><a href="/find-a-doctor?letter=X&page=1">X</a></li>
+                <li><a href="/find-a-doctor?letter=Y&page=1">Y</a></li>
+                <li><a href="/find-a-doctor?letter=Z&page=1">Z</a></li>
+            </ul>
+        </div>
+        <p class="help">
+            Looking for more options, including doctors near you? <a href="/find-a-doctor">Use our expanded physician search</a>.
+        </p>
+
+    </div>
+</div><!-- container -->
+
+                </div>
+                <div id="tab2" class="site-header__dropdowns__item">
+                    <div class="container">
+    <div class="dropdown__text">
+        <h3 class="dropdown__text__title">Hospitals &amp; Locations</h3>
+        <p>Chances are we’re in your own backyard—or pretty close to it. From Ardmore and Bryn Mawr to West Chester and Wynnewood, find a location that’s convenient for you.</p>
+        <br/>
+        <div class="nrc_overall_reviews_stat">
+            <div class="ds-summary overallReview" data-ds-view="org"></div>
+        </div>
+    </div>
+    <div class="dropdown__filters">
+        <div class="js-mega-menu"
+             data-search-link="/locations"
+             data-search-endpoint="GetLocations"
+             data-keyword-label="Search locations by name, street or town"
+             data-keyword-placeholder="Search by Keyword"
+             data-view-label="View All"></div>
+
+
+
+
+
+    </div>
+</div><!-- container -->
+
+                </div>
+                <div id="tab3" class="site-header__dropdowns__item">
+                    <div class="container">
+    <div class="dropdown__text">
+        <h3 class="dropdown__text__title">Our Specialties</h3>
+        <p>What services are you looking for? At Main Line Health we have physicians and staff across more than 150 specialties and services. Just start typing to find what you need.</p>
+        <br/>
+        <div class="nrc_overall_reviews_stat">
+            <div class="ds-summary overallReview" data-ds-view="org"></div>
+        </div>
+    </div>
+    <div class="dropdown__filters">
+        <div class="js-mega-menu"
+             data-search-link="/specialties"
+             data-search-endpoint="GetSpecialties"
+             data-keyword-label="Search specialties"
+             data-keyword-placeholder="Search by Keyword"
+             data-view-label="View All"></div>
+
+
+
+
+
+    </div>
+</div><!-- container -->
+
+                </div>
+                <div id="tab4" class="site-header__dropdowns__item">
+                    <div class="container">
+    <div class="dropdown__text">
+        <h3 class="dropdown__text__title">Conditions &amp; Treatments</h3>
+        <p>Get information about more than 750 specific types of illness, injury and disease to help you understand the different kinds of treatment options and find the right doctor or service for your needs.</p>
+        <br/>
+        <div class="nrc_overall_reviews_stat">
+            <div class="ds-summary overallReview" data-ds-view="org"></div>
+        </div>
+    </div>
+    <div class="dropdown__filters">
+        <div class="js-mega-menu"
+             data-search-link="/conditions-and-treatments"
+             data-search-endpoint="GetConditionsAndTreatments"
+             data-keyword-label="Search conditions &amp; treatments"
+             data-keyword-placeholder="Search by Keyword"
+             data-view-label="View All"></div>
+
+
+
+
+
+    </div>
+</div><!-- container -->
+
+                </div>
+            <div id="js-header-bar-id"
+                 class="js-mega-menu site-header__dropdowns__item"
+                 data-search-link="/search"
+                 data-keyword-label="Search Main Line Health"
+                 data-keyword-placeholder="Search by keyword"
+                 data-view-label="View All">
+            </div>
+
+             
+
+<div id="tab6" class="site-header__dropdowns__item">
+    <div class="container">
+        <h3 class="dropdown__title__center">Make an appointment</h3>
+        <div class="dropdown__appointment-item l-3up--1">
+            <h4 class="dropdown__appointment-item__title">Doctor appointments</h4>
+            <p>Our friendly staff is available weekdays from 8:00 am to 6:00 pm, to help you choose the provider and location that&#39;s right for you.</p>
+            <a href='/appointments/request-physician-appointment' class='button' >USE OUR PHYSICIAN APPOINTMENT FORM</a>
+            <a class="tel" href="tel:+18662255654">1.866.CALL.MLH</a>
+        </div>
+
+        <div class="dropdown__appointment-item l-3up--2">
+            <h4 class="dropdown__appointment-item__title">Imaging appointments</h4>
+            <p>We are here weekdays and Saturday mornings to help you schedule your X-rays, mammograms, ultrasounds and other imaging needs.</p>
+            <a href='/specialties/diagnostic-radiology/mammography-appointment-request' class='button' title='Mammography Appointment Request' >SCHEDULE YOUR SCREENING MAMMOGRAM ONLINE</a>
+            <a class="tel" href="tel:+14845801800">484.580.1800</a>
+        </div>
+
+        <div class="dropdown__appointment-item l-3up--3">
+            <h4 class="dropdown__appointment-item__title">Main Line Health laboratories</h4>
+            <p>Most tests are handled on a walk-in basis at any of our locations. Visit our lab services page for a list of tests which require appointments.</p>
+            <a class="tel" href="tel:+14845804200">484.580.4200</a> 
+        </div>
+    </div> <!-- container -->
+</div> 
+
+
+        </div>
+
+    </div>
+
+    <div class="site-header site-header--small">
+        <div class="site-header__wrap">
+            <div class="container">
+                <div class="site-header--logo--small">
+                    <a title="Main Line Health - Well Ahead" href="/">
+                        <img src='/-/media/images/global/2020/logosmall2020.jpg?h=26&amp;w=200&amp;la=en&amp;hash=7C82B49E875D9108177E3FD19F54FCE93773BD18' alt='Main Line Health' />
+                        <img class="fallback" src="/assets/images/logosmall.png" alt="Main Line Health"/>
+                    </a>
+                </div>
+                <div class="site-header--buttons-small">
+                    <ul>
+                        <li class="small-header__special-alert-button">
+                            <a class="button button--get-care js-GetCareNowBtn" href="javascript:void(0);" title="Get Care"><i class="fa fa-heart"></i> <span class="button--get-care__text">Get Care</span></a>
+                        </li>
+                        <li><a class="button button--like-to" href="javascript:void(0);" title="I&#39;d like to"><i class="fa fa-bars"></i> <span class="button--like-to__text">I&#39;d like to</span></a></li>
+                        <li><a class="button button--secondary button--search--small" href="javascript:void(0);" title="Search"><span class="element-invisible">Search the site</span> <i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="like-to">
+            <ul >
+                    <li>
+<a href='/find-a-doctor' class='doctors' title='Find a Doctor' >Find a Doctor                            <i class="fa fa-angle-right"></i>
+</a>                    </li>
+                    <li>
+<a href='/locations' class='doctors' title='Hospitals & Locations' >Hospitals &amp; Locations                            <i class="fa fa-angle-right"></i>
+</a>                    </li>
+                    <li>
+<a href='/specialties' class='doctors' title='Specialties' >Specialties                            <i class="fa fa-angle-right"></i>
+</a>                    </li>
+                    <li>
+<a href='/conditions-and-treatments' class='doctors' title='Conditions & Treatments' >Conditions &amp; Treatments                            <i class="fa fa-angle-right"></i>
+</a>                    </li>
+                <!--
+                    adding primary navigation links here
+                    for now: Careers
+                //-->
+
+                    <li>
+<a href='/patient-services' class='doctors' title='Patient Services' >Patient Services                            <i class="fa fa-angle-right"></i>
+</a>                    </li>
+
+                    <li>
+<a href='/patient-services/appointments' class='doctors' title='Make An Appointment' >Make An Appointment                            <i class="fa fa-angle-right"></i>
+</a>                    </li>
+                <!--
+                  adding thin crust nav  
+                //-->
+                        <li>
+<a href='/careers' class='doctors' title='Careers' >Careers                                <i class="fa fa-angle-right"></i>
+</a>                        </li>
+                        <li>
+<a href='/ways-to-give' class='doctors' title='Giving' >Giving                                <i class="fa fa-angle-right"></i>
+</a>                        </li>
+                        <li>
+<a href='/research' class='doctors' title='Research' >Research                                <i class="fa fa-angle-right"></i>
+</a>                        </li>
+
+            </ul>
+        </nav>
+        <div class="search--small">
+            <div class="js-mega-menu"
+                 data-search-link="/search"
+                 data-keyword-placeholder="Search Main Line Health"
+                 data-view-label="View All">
+            </div>
+        </div>
+    </div>
+</header>
+            </div>
+
+
+            <div id="content" class="splash">
+
+                
+
+    <div class="splash__image" style="background-image: url('/-/media/images/banners/conditions/banner2covid19.jpg');">
+        <div class="splash__content" style="min-height:300px">
+            <div class="container">
+                <h1 class="splash__title">COVID-19 Care and Resources</h1>
+                                        <a class="button splash__content__button" href="/conditions-and-treatments"><i class="fa fa-angle-left"></i> Back to Conditions &amp; Treatments</a>
+            </div>
+        </div>
+        <div class="splash__special-alert-button">
+            <div class="btn-special-alert js-GetCareNowBtn">
+                <div class="special-alert-button-icon"><div class="fa fa-heart-o"></div><div class="fa fa-heart"></div></div>
+                <div class="special-alert-button-text">Get Care</div>
+            </div>
+        </div>
+    </div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="splash-meta">
+	<div class="container">
+		<div class="share">
+			<span class="share__label">Share</span>
+			<span class="social addthis_custom_sharing" data-url="https://www.mainlinehealth.org/conditions-and-treatments/conditions/covid-19" data-title="COVID-19 Care and Resources"></span>
+		</div>
+	</div>
+</div>
+
+
+            </div>
+            <div class="l-block l-block--main l-block-top">
+
+                
+                <div class="container bodyRightRailContainer">
+                    <aside class="l-sidebar" role="complementary">
+	<nav class="sidebar__prox-nav sidebar--block">
+		<ul class="prox-nav__parent">
+			<li itemprop="name" class="prox-nav__parent-title" >
+				<a itemprop="url" name=active-sub-nav  class=&#39;is-active&#39; ><span>COVID-19 Care and Resources</span></a>
+
+                <ul class="prox-nav__level2">
+					<li  itemprop="name" class="has-children ">
+						<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/patient-safety><span>Keeping You Safe</span></a>
+						<ul class="prox-nav__level3">
+								<li  itemprop="name" class="">
+									<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/patient-safety/pregnancy-and-newborn-care><span>Pregnancy and Newborn Care</span></a>
+								</li>
+								<li  itemprop="name" class="">
+									<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/patient-safety/behavioral-health-care><span>Behavioral Health Care</span></a>
+								</li>
+								<li  itemprop="name" class="">
+									<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/patient-safety/patient-safety-faq><span>Patient Safety FAQ</span></a>
+								</li>
+						</ul>
+				</li>
+					<li  itemprop="name" class=" ">
+						<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/staying-well-during-covid19><span>Staying Well During COVID-19</span></a>
+				</li>
+					<li  itemprop="name" class=" ">
+						<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/covid19-testing-and-treatment><span>COVID-19 Testing and Treatment</span></a>
+				</li>
+					<li  itemprop="name" class=" ">
+						<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/how-you-can-help><span>Ways to Help During COVID-19</span></a>
+				</li>
+					<li  itemprop="name" class=" ">
+						<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/news><span>News &amp; Blog Posts</span></a>
+				</li>
+					<li  itemprop="name" class=" ">
+						<a  itemprop="url"href=/conditions-and-treatments/conditions/covid-19/covid-19-vaccine-faqs><span>Vaccine FAQs</span></a>
+				</li>
+		</ul>
+</li >
+			</ul >
+			</nav>
+</aside>
+
+                        <main class="l-content" role="main">
+	<article class="page-content">
+<h2>COVID-19: What you need to know about vaccination</h2>
+<a name="top"></a>
+<p>There is no greater privilege than caring for our neighbors, as we have for generations. We share your excitement about the COVID-19 vaccine's arrival and the role it plays in leading us to a brighter 2021.</p>
+<div style="background-color: #E9EEF1; padding: 10px 10px 0px; border: 1px solid #00739C;">
+<p style="text-align: center;"><strong>COVID Vaccine Information</strong></p>
+<p>At this time, Main Line Health is offering vaccinations for people who:</p>
+<ul>
+    <li>Are 75 and over <strong><em>and</em></strong></li>
+    <li>Have been seen at a Main Line Health facility in the past year <strong><em>and</em></strong></li>
+    <li>Have an active MyChart account</li>
+</ul>
+<p>In accordance with state and federal guidelines, we will soon offer vaccinations for adults age 65 and over, as well as those between the ages of 16-64 with a high-risk condition. We do not have the supply to vaccinate the individuals in these categories all at once. In an order to efficiently and equitably meet the needs of our community, we will be taking a phased approach to vaccinating our patients.</p>
+<p>For those Main Line Health patients who qualify and meet the criteria for vaccination as noted above, please <a href="https://my.mainlinehealth.org/MyChart/Authentication/Login?" target="_blank">register for a MyChart patient portal account</a> to ensure you receive an invitation to schedule an appointment when the vaccination supply is available.</p>
+<p style="text-align: center;"><a href="/conditions-and-treatments/conditions/covid-19/covid-19-vaccine-faqs" class="button">Visit Our COVID Vaccine FAQs</a></p>
+</div>
+<br>
+<ul style="list-style: none; display: flex; margin: 0px; padding: 0px; flex-wrap: wrap; justify-content: center; width: 100%;">
+    <li style="white-space: nowrap; margin-right: 5px;"><a href="#eligibility" class="button" style="padding: 10px 30px;">Vaccination <br>
+    Eligibility</a></li>
+    <li style="white-space: nowrap; margin-right: 5px;"><a href="#health" class="button" style="padding: 10px 30px;">Vaccines and <br>
+    your health <br>
+    </a></li>
+    <li style="white-space: nowrap; margin-right: 5px;"><a href="#location" class="button" style="padding: 10px 30px;">Vaccination <br>
+    locations</a></li>
+    <li style="white-space: nowrap; margin-right: 5px;"><a href="#health-equity" class="button" style="padding: 10px 30px;">Health equity <br>
+    and vaccines</a>
+    </li>
+    <a name="eligibility"></a>
+</ul>
+<hr style="height: 1px; background-color:#00739d; border: none; margin: 0px;">
+<br>
+<h3>When can I get vaccinated?</h3>
+<p>Because there is a limited supply of COVID-19 vaccine, the Centers for Disease Control is making recommendations to federal, state, and local governments about who should be vaccinated first. <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations.html" target="_blank">Find out more about the process.</a> In accordance with this guidance, Main Line Health is distributing vaccines as safely and efficiently as possible to the members of our community who are at greatest risk.</p>
+<p><strong>Vaccinations for our patients and community</strong></p>
+<p>While Main Line Health is a vaccination site, our ability to offer vaccinations depends on supply. <strong>Our vaccine supply is intermittent and very limited. </strong>Health systems cannot be solely responsible for the distribution of vaccines to our region. Instead, vaccinating our community will require the work of many including the local departments of health, pharmacies, and health systems.</p>
+<p><strong>Please do not call your provider's office to request a vaccine. You will not be able to schedule an appointment by calling. You will receive outreach about an appointment, if you qualify.</strong><span style="font-weight: lighter;"></span></p>
+<p style="text-align: center;"><a href="/conditions-and-treatments/conditions/covid-19/covid-19-vaccine-faqs" class="button">Visit Our COVID Vaccine FAQs</a></p>
+<p>Main Line Health is offering vaccinations for adults 75 and over at this time. In accordance with state and federal guidelines, we will soon offer vaccinations for adults age 65 and over, as well as those between the ages of 16-64 with a high-risk condition. We do not have the supply to vaccinate the individuals in these categories all at once. In an order to efficiently and equitably meet the needs of our community, we will be taking a phased approach to vaccinating our patients.</p>
+<p>We understand that many of you are eager to be vaccinated. We ask for your patience and cooperation as we seek to reach out to all of our eligible patients. This is a time-consuming process, but we are committed to vaccinating as many members of our community as we can with the vaccine supply that is made available to us, which is very limited. Please be assured that we will reach out to you as soon as possible.</p>
+<p>As more information—and more supply—becomes available, we will continue to keep our communities updated. Please continue to check our website and social media accounts for updates, and thank you for your patience.</p>
+<p><strong>Vaccinations for health care providers</strong></p>
+<p>Since the start of our vaccinations at Main Line Health in December, we have been vaccinating our patient-facing staff, as well as independent medical providers in our community. Additionally, 10 percent of our vaccine supply will be allocated to independent, non-affiliated practices, consistent with the order given by the Pennsylvania Secretary of Health.</p>
+<p>If you are an independent non-affiliated medical provider or frontline health care worker who wishes to be vaccinated and has not already been contacted by a member of our vaccine liason team, please email <a href="mailto:CommunityCOVIDVaccine@MLHS.org">CommunityCOVIDVaccine@MLHS.org</a>.</p>
+<p>Please be advised: You will need an active Main Line Health MyChart account to be scheduled and vaccinated by Main Line Health. <a href="/patient-services/patient-portals">Learn more about registering for MyChart</a>.</p>
+<p><strong>Should I get vaccinated?</strong></p>
+<a name="health"></a>
+<p><figure
+	class="featured-image
+	image-right
+		
+	">
+	<img src='/-/media/images/conditions-and-treatments/covid-19-2021/5000th-recipient.jpg?h=328&amp;w=400&amp;la=en&amp;hash=8421E5EF6A15A711EF0765BF064FCDA9B3A85737' alt='' />
+</figure>In order to fight this pandemic, it's important to use every tool we have to defend ourselves. In addition to masks and social distancing, vaccines work with your immune system to give your body a better chance of fighting off the virus if you do get it. <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html#Getting" target="_blank">The CDC further explains the importance of COVID-19 vaccination</a>.</p>
+<a href="#top">Back to top</a>
+<h3>What if I'm immunocompromised?</h3>
+<p>Vaccination is a personal decision. If you are immunocompromised or have concerns about receiving the vaccine and its side effects, make an appointment to discuss these concerns with your health care provider. The CDC has more <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/immunocompromised.html" target="_blank">information </a>available for people who are immunocompromised on their website.</p>
+<h3>What if I'm pregnant? Do I still get vaccinated?</h3>
+<p>Pregnant patients may be vaccinated, but it's important to talk with your provider to help you decide whether vaccination is right for you. Vaccination for disease such as COVID-19, which has been authorized for use under Emergency Use Authorization (EUA), often demonstrates greater benefit than risk. <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/pregnancy.html" target="_blank">Here is more information on COVID-19 vaccination and pregnancy and breastfeeding.</a></p>
+<h3>The vaccine came out so quickly. Is it safe?</h3>
+<p><figure
+	class="featured-image
+	
+		
+	">
+	<img src='/-/media/images/conditions-and-treatments/covid-19-2021/molly-moses.jpg?h=417&amp;w=300&amp;la=en&amp;hash=6FCF1B6D1BA48D3F402B3BD075E5AD6FC0BE1D50' alt='' />
+</figure><br>
+Many people are concerned about the vaccine's safety because of how quickly it was developed. The scientific and medical community are unanimously agreed on the safety of the vaccine and you can <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html" target="_blank">read more about the benefits being vaccinated</a>. The COVID vaccines are messenger RNA (mRNA) vaccines, which do not contain a live virus and cannot infect the vaccinated person. <a href="https://www.cdc.gov/vaccines/covid-19/hcp/mrna-vaccine-basics.html" target="_blank">Learn more about mRNA vaccines on the CDC website</a>.</p>
+<h3>Can I get COVID from the vaccine?</h3>
+<a name="location"></a>
+<p>No, you cannot get COVID-19 from the vaccine. The vaccines being produced in the United States contain no live virus. Research continues regarding vaccination and antibody testing. <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits/facts.html" target="_blank">Get the COVID-19 facts from the CDC.</a></p>
+<h3>Where should I go to get vaccinated?</h3>
+<a name="health-equity"></a>
+<p>In Pennsylvania the best way to follow the rollout of the vaccine is to stay tuned to the <a href="https://www.health.pa.gov/Pages/default.aspx" target="_blank">Department of Health</a> website which is constantly being updated. You'll soon <a href="https://www.health.pa.gov/topics/disease/coronavirus/Pages/Vaccine.aspx" target="_blank">find vaccine locations in Pennsylvania,</a> such as pharmacies, doctor's offices, urgent care centers and health centers. Currently, there is no specific timeline identified for the general public.</p>
+<a href="#top">Back to top</a>
+<h3>COVID-19 vaccine and health equity</h3>
+<p><figure
+	class="featured-image
+	image-right
+		
+	">
+	<img src='/-/media/images/conditions-and-treatments/covid-19-2021/kristi-west.jpg?h=400&amp;w=300&amp;la=en&amp;hash=3BD80AC2143AA24F570396301B029BBA2F746F8F' alt='' />
+</figure>A history of racism, disparity and inequity within the health care delivery system has resulted in entrenched distrust among many within Black and LatinX communities. As a result, there is significant skepticism about the COVID-19 vaccine. Yet Black and brown people have also been disproportionately affected by COVID-19. A combination of factors such as chronic health conditions due to poor access to health care and affordable, fresh food, have made this community more vulnerable to disease, in addition to the fact that many are also in higher risk jobs such as food service, bus driving, and home health workers.</p>
+<p>At Main Line Health, we are committed to health equity and ensuring that everyone has access to the information, education and resources they need to learn more about vaccination and be vaccinated, if they so choose. A team of employees and medical staff from across Main Line Health is meeting on a regular basis to develop education and outreach strategies to engage individuals who have questions and concerns about the COVID vaccination.</p>
+<p>Ultimately, vaccination is a personal decision and we respect everyone's choice about whether or not to receive the vaccine, but we want to ensure that information and vaccination reaches communities who are disproportionately affected by this virus.</p>
+<a href="#top">Back to top</a>
+<h3>Whom to call with questions</h3>
+<p>We understand you may have questions about the vaccine and you may have some concerns as well. We will continue to provide accurate, up-to-date resources and guidance from the <a href="https://www.health.pa.gov/Pages/default.aspx" target="_blank">State Department of Health</a> as well as the <a href="http://www.cdc.gov/" target="_blank">Centers for Disease Control.</a> We also encourage you to talk to your own primary care provider about whether vaccination is appropriate for you.</p>
+<p>If you have concerns or questions about COVID-19 or are exhibiting respiratory symptoms, please contact your primary care provider.</p>
+<h3>Additional resources</h3>
+<ul>
+    <li><a href="https://wwwnc.cdc.gov/travel/destinations/list" target="_blank">CDC Travel Guide</a></li>
+    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/about/index.html" target="_blank">CDC Situation Summary</a></li>
+    <li><a href="https://www.health.pa.gov/About/Pages/Contact.aspx" target="_blank">Pennsylvania Department of Health</a></li>
+    <li><a href="https://www.nj.gov/health/commiss/contact/" target="_blank">New Jersey Department of Health</a></li>
+    <li><a href="https://dhss.delaware.gov/dhss/dph/index.html" target="_blank">Delaware Department of Health</a></li>
+</ul>
+<p><strong>Pfizer and Moderna vaccine FAQ and information</strong></p>
+<p>Read these facts sheets to get answers to your frequently asked questions about the Pfizer and Moderna COVID-19 vaccines:</p>
+<ul>
+    <li><a href="https://www.fda.gov/media/144414/download" target="_blank">Pfizer BioNTech COVID-19 Vaccine Fact Sheet</a></li>
+    <li><a href="https://www.fda.gov/media/144638/download" target="_blank">Moderna COVID-19 Vaccine Fact Sheet</a></li>
+</ul>	</article>
+</main>
+                </div>
+            </div>
+
+
+            <div class="l-block l-block--postcontent">
+                
+
+<div class="l-block--gray">
+	<div class="l-block l-block--50 container">
+		
+		
+	</div>
+</div>
+
+<div class="">
+	<div class="l-block l-block--50 container">
+		
+<div class="related-components related-components--events clearfix">
+	<div class="container">
+
+		<div class="list list--sm">
+			<div class="list__header">
+				<h3 class="list__header__title">Related Events </h3>
+			</div>
+			<ul class="list__items">
+
+						<li class="list__item list__item--event">
+
+							<div class="list__meta">
+								<span class="list__type">Events</span>
+
+
+								<span class="list__time">5:00 PM  To 6:00 PM </span>
+							</div>
+
+								<span class="list__event-date">
+									
+
+                                    Feb
+                                    <span class="list__event-date__day">3</span>
+                                    <span class="list__event-date__year">2021</span>
+								</span>
+
+								<div class="list__content">
+									<h4 class="list__title">
+										<a href="/events/2021/02/03/1700/virtual-senior-supper-vaccine-updates?id=2B99E5B6-9C31-4D03-8999-6FF2F1C38F21">Virtual Senior Supper: Vaccine Updates</a>
+									</h4>
+
+									<a class="link" href="/events/2021/02/03/1700/virtual-senior-supper-vaccine-updates?id=2B99E5B6-9C31-4D03-8999-6FF2F1C38F21">Location & registration</a>
+								</div>
+						</li>
+						<li class="list__item list__item--event">
+
+							<div class="list__meta">
+								<span class="list__type">Events</span>
+
+
+								<span class="list__time">7:00 PM  To 8:00 PM </span>
+							</div>
+
+								<span class="list__event-date">
+									
+
+                                    Feb
+                                    <span class="list__event-date__day">17</span>
+                                    <span class="list__event-date__year">2021</span>
+								</span>
+
+								<div class="list__content">
+									<h4 class="list__title">
+										<a href="/events/2021/02/17/1900/covid-19-vaccines-science-knowledge-safety?id=6665A648-83ED-4589-BC0A-1DBB2AF741A6">COVID-19 Vaccines: Science, Knowledge, Safety</a>
+									</h4>
+
+									<a class="link" href="/events/2021/02/17/1900/covid-19-vaccines-science-knowledge-safety?id=6665A648-83ED-4589-BC0A-1DBB2AF741A6">Location & registration</a>
+								</div>
+						</li>
+						<li class="list__item list__item--event">
+
+							<div class="list__meta">
+								<span class="list__type">Events</span>
+
+
+								<span class="list__time">5:00 PM  To 6:00 PM </span>
+							</div>
+
+								<span class="list__event-date">
+									
+
+                                    Mar
+                                    <span class="list__event-date__day">10</span>
+                                    <span class="list__event-date__year">2021</span>
+								</span>
+
+								<div class="list__content">
+									<h4 class="list__title">
+										<a href="/events/2021/03/10/1700/virtual-senior-supper-dementia-care-giving-covid?id=DC4E9EBC-EE98-42A1-91EF-2FCC24B95AC7">Virtual Senior Supper: Dementia, Care Giving, COVID</a>
+									</h4>
+
+									<a class="link" href="/events/2021/03/10/1700/virtual-senior-supper-dementia-care-giving-covid?id=DC4E9EBC-EE98-42A1-91EF-2FCC24B95AC7">Location & registration</a>
+								</div>
+						</li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+		
+
+<div class="related-components related-components--news clearfix">
+    <div class="container">
+
+        <div class="list list--sm">
+            <div class="list__header">
+                <h3 class="list__header__title">Related News Stories</h3>
+            </div>
+            <ul class="list__items">
+                    <li class="list__item list__item--news">
+                        <div class="list__meta">
+                                <span class="list__type">Blog</span>
+                                <span class="list__date">January 22, 2021</span>
+                        </div>
+
+                                    <a href="/blog/blog-posts/2021/01/22/cold-flu-season-covid" class="list__img">
+                                        <img src="/-/media/images/blog/2021/01/cold-flu-covid/woman-coughing-into-her-arm-and-holding-thermometer/woman-coughing-into-her-arm-and-holding-thermometer_article_thumbnail.jpg" alt="Woman coughing into her arm and holding thermometer"/>
+                                    </a>
+                                            <div class="list__content has-img">
+                        <h4 class="list__title"><a href="/blog/blog-posts/2021/01/22/cold-flu-season-covid">Preparing for this year’s cold and flu season</a></h4>
+                        </div>
+                    </li>
+                    <li class="list__item list__item--news">
+                        <div class="list__meta">
+                                <span class="list__type">Blog</span>
+                                <span class="list__date">October 05, 2020</span>
+                        </div>
+
+                                    <a href="/blog/blog-posts/2020/10/05/how-to-do-halloween-2020" class="list__img">
+                                        <img src="/-/media/images/blog/2020/10/covid-halloween-safety/jack-o-lantern-wearing-a-mask-during-covid-halloween/jack-o-lantern-wearing-a-mask-during-covid-halloween_article_thumbnail.jpg" alt="Jack o lantern wearing a mask during COVID Halloween"/>
+                                    </a>
+                                            <div class="list__content has-img">
+                        <h4 class="list__title"><a href="/blog/blog-posts/2020/10/05/how-to-do-halloween-2020">How to do Halloween 2020 safely (and still be a little spooky)</a></h4>
+                        </div>
+                    </li>
+                    <li class="list__item list__item--news">
+                        <div class="list__meta">
+                                <span class="list__type">Blog</span>
+                                <span class="list__date">September 16, 2020</span>
+                        </div>
+
+                                    <a href="/blog/blog-posts/2020/09/16/how-covid-affects-flu-season" class="list__img">
+                                        <img src="/-/media/images/blog/2020/09/covid-and-flu/woman-wearing-a-mask-is-getting-a-flu-vaccination-administered-by-doctor-in-a-mask/woman-wearing-a-mask-is-getting-a-flu-vaccination-administered-by-doctor-in-a-mask_article_thumbnail.jpg" alt="Woman wearing a mask is getting a flu vaccination administered by doctor in a mask"/>
+                                    </a>
+                                            <div class="list__content has-img">
+                        <h4 class="list__title"><a href="/blog/blog-posts/2020/09/16/how-covid-affects-flu-season">How will COVID affect flu season?</a></h4>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+	</div>
+</div>
+
+            </div>
+
+
+
+<footer class="footer" role="contentinfo">
+        <div class="footer__newsletter">
+            <div class="footer__newsletter__center container">
+                <span class="newsletter__text">Sign up for our <img class="newsletter__text--well-ahead" src="/assets/images/svg/logo--well-ahead.svg" alt="Well Ahead"> newsletter</span>
+                <div class="newsletter__form search-wrap js-newsletter-form"
+                     data-id="f37927af7f"
+                     data-success="Got it! Please check your inbox.">
+                    <label class="element-invisible"
+                           for="newsletter">Enter email address</label>
+                        <input type="text"
+                               id="newsletter"
+                               name="newsletter"
+                               placeholder='Enter email address' />
+                        <button class="button postfix-overlay"><i class="fa fa-envelope"></i> <span class="element-invisible">Submit</span></button>
+                    </div>
+                </div>
+            </div> 
+    <div class="footer__content container">
+        <div class="footer__connect">
+            <a class="footer__logo" title="Main Line Health" href="/"><img src='/-/media/images/global/logolargeinverse.svg?h=90&amp;w=170&amp;la=en&amp;hash=440116CC930E88F4C486D4BDE1563CFD5A709ED5' alt='Main Line Health – Well Ahead' /></a>
+            <div class="footer__number">
+                <span class="call-us">Call us at</span>
+                <a class="num" href="tel:+18662255654">1.866.CALL.MLH (1.866.225.5654)</a>
+            </div>
+            <ul class="footer__social">
+                    <li class="social__facebook">
+<a href='https://www.facebook.com/mainlinehealth' class='fa-stack fa-lg' rel='nofollow' target='_blank' title='Main Line Health on Facebook' >                            <span class="element-invisible">Facebook</span>
+                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                            <i class="fa fa-facebook fa-stack-1x"></i>
+</a>                    </li>
+                    <li class="social__twitter">
+<a href='https://twitter.com/mainlinehealth' class='fa-stack fa-lg' rel='nofollow' target='_blank' title='Main Line Health on Twitter' >                            <span class="element-invisible">Twitter</span>
+                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                            <i class="fa fa-twitter fa-stack-1x"></i>
+</a>                    </li>
+                    <li class="social__youtube">
+<a href='https://www.youtube.com/user/MainLineHealth' class='fa-stack fa-lg' rel='nofollow' target='_blank' title='Main Line Health on Youtube' >                            <span class="element-invisible">YouTube</span>
+                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                            <i class="fa fa-youtube fa-stack-1x"></i>
+</a>                    </li>
+            </ul>
+        </div>
+
+        <div class="footer__link">
+
+
+                <div class="footer__list footer__list--col1 ">
+                    <h5 class="footer__title">About Main Line Health</h5>
+                    <ul>
+
+                            <li itemprop="name">
+<a href='/about' title='About Us' itemprop='url' >About Us</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations' title='Hospitals &amp; Locations' itemprop='url' >Hospitals &amp; Locations</a>                        </li>
+                            <li itemprop="name">
+<a href='/careers' itemprop='url' >Careers</a>                        </li>
+                            <li itemprop="name">
+<a href='/main-line-healthcare' title='Main Line HealthCare' itemprop='url' >Main Line HealthCare</a>                        </li>
+                            <li itemprop="name">
+<a href='/quality-safety' title='Quality &amp; Patient Safety' itemprop='url' >Quality &amp; Patient Safety</a>                        </li>
+                            <li itemprop="name">
+<a href='/about/diversity-inclusion' title='Diversity, Respect &amp; Inclusion' itemprop='url' >Diversity, Respect &amp; Inclusion</a>                        </li>
+                            <li itemprop="name">
+<a href='/about/community-health-needs-assessment' title='Community Health Needs Assessment' itemprop='url' >Community Health Needs Assessment</a>                        </li>
+                            <li itemprop="name">
+<a href='/events' title='Events &amp; Classes' itemprop='url' >Events &amp; Classes</a>                        </li>
+                            <li itemprop="name">
+<a href='/news' title='News &amp; Updates' itemprop='url' >News &amp; Updates</a>                        </li>
+                            <li itemprop="name">
+<a href='/about/communications' title='Media Relations' itemprop='url' >Media Relations</a>                        </li>
+                            <li itemprop="name">
+<a href='/ways-to-give' title='Ways to Give' itemprop='url' >Ways to Give</a>                        </li>
+                    </ul>
+                </div>
+                <div class="footer__list footer__list--col1 ">
+                    <h5 class="footer__title">For Patients</h5>
+                    <ul>
+
+                            <li itemprop="name">
+<a href='/find-a-doctor' title='Find a Doctor' itemprop='url' >Find a Doctor</a>                        </li>
+                            <li itemprop="name">
+<a href='/appointments/request-physician-appointment' title='Make an Appointment' itemprop='url' >Make an Appointment</a>                        </li>
+                            <li itemprop="name">
+<a href='/patient-services/patient-portals' itemprop='url' >My Main Line Health Chart</a>                        </li>
+                            <li itemprop="name">
+<a href='/main-line-healthcare/our-practices' title='Main Line HealthCare Practices' itemprop='url' >Main Line HealthCare Practices</a>                        </li>
+                            <li itemprop="name">
+<a href='/patient-services/patient-billing' title='Pay My Bill' itemprop='url' >Pay My Bill</a>                        </li>
+                            <li itemprop="name">
+<a href='/patient-services/patient-billing/financial-assistance' title='Charity Care &amp; Financial Assistance' itemprop='url' >Charity Care &amp; Financial Assistance Process</a>                        </li>
+                            <li itemprop="name">
+<a href='/about/policies/charity-care' itemprop='url' >Charity Care &amp; Financial Assistance Policy</a>                        </li>
+                            <li itemprop="name">
+<a href='/patient-services/medical-records' title='Request Medical Records' itemprop='url' >Request Medical Records</a>                        </li>
+                            <li itemprop="name">
+<a href='/patient-spotlights' title='Patient Spotlights' itemprop='url' >Patient Spotlights</a>                        </li>
+                            <li itemprop="name">
+<a href='/top-doctors' title='Top Doctors' itemprop='url' >Meet our Top Docs</a>                        </li>
+                            <li itemprop="name">
+<a href='/blog' title='Well Ahead Blog' itemprop='url' >Well Ahead Blog</a>                        </li>
+                            <li itemprop="name">
+<a href='/about/contact-us' title='Contact Us' itemprop='url' >Contact Us</a>                        </li>
+                            <li itemprop="name">
+<a href='/patient-services' title='View all Patient Services' itemprop='url' >View all Patient Services</a>                        </li>
+                    </ul>
+                </div>
+                <div class="footer__list footer__list--col1 ">
+                    <h5 class="footer__title">For Professionals</h5>
+                    <ul>
+
+                            <li itemprop="name">
+<a href='/employees' title='Employee Resources' itemprop='url' >MLH Employee Resources</a>                        </li>
+                            <li itemprop="name">
+<a href='/physicians' title='For Physicians' itemprop='url' >For Physicians</a>                        </li>
+                            <li itemprop="name">
+<a href='/physicians/physician-partners' itemprop='url' >Main Line Health Physician Partners (Clinically Integrated Network)</a>                        </li>
+                            <li itemprop="name">
+<a href='/nursing' title='For Nurses' itemprop='url' >For Nurses</a>                        </li>
+                            <li itemprop="name">
+<a href='/ems' title='EMS Professionals' itemprop='url' >EMS Professionals</a>                        </li>
+                            <li itemprop="name">
+<a href='/medical-affairs' title='Medical Affairs' itemprop='url' >Medical Affairs</a>                        </li>
+                    </ul>
+                </div>
+                <div class="footer__list footer__list--col1 ">
+                    <h5 class="footer__title">Research</h5>
+                    <ul>
+
+                            <li itemprop="name">
+<a href='/research/lankenau-institute-for-medical-research' itemprop='url' >Lankenau Institute for Medical Research</a>                        </li>
+                            <li itemprop="name">
+<a href='/research/office-of-research-protections' itemprop='url' >Office of Research Protections</a>                        </li>
+                            <li itemprop="name">
+<a href='/research/office-of-research-protections/institutional-review-board' title='Institutional Review Board' itemprop='url' >Institutional Review Board</a>                        </li>
+                            <li itemprop="name">
+<a href='/research/clinical-trials' itemprop='url' >Clinical Trials</a>                        </li>
+                            <li itemprop="name">
+<a href='/research' title='Research' itemprop='url' >Research</a>                        </li>
+                    </ul>
+                </div>
+                <div class="footer__list footer__list--col3 footer__list--newrow">
+                    <h5 class="footer__title">Hospitals and Health Centers</h5>
+                    <ul>
+
+                            <li itemprop="name">
+<a href='/locations/lankenau-medical-center' title='Lankenau Medical Center' itemprop='url' >Lankenau Medical Center</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/bryn-mawr-hospital' title='Bryn Mawr Hospital' itemprop='url' >Bryn Mawr Hospital</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/paoli-hospital' title='Paoli Hospital' itemprop='url' >Paoli Hospital</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/riddle-hospital' title='Riddle Hospital' itemprop='url' >Riddle Hospital</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/bryn-mawr-rehab-hospital' title='Bryn Mawr Rehab Hospital' itemprop='url' >Bryn Mawr Rehab Hospital</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/mirmont-treatment-center' title='Mirmont Treatment Center' itemprop='url' >Mirmont Treatment Center</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/main-line-health-broomall' title='Main Line Health Center in Broomall' itemprop='url' >Main Line Health Broomall</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/main-line-health-collegeville' title='Main Line Health Center in Collegeville' itemprop='url' >Main Line Health Collegeville</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/main-line-health-concordville' title='Main Line Health Center in Concordville' itemprop='url' >Main Line Health Concordville</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/main-line-health-exton-square' title='Main Line Health Center at Exton Square' itemprop='url' >Main Line Health Exton Square</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/main-line-health-king-of-prussia' itemprop='url' >Main Line Health King of Prussia</a>                        </li>
+                            <li itemprop="name">
+<a href='/locations/main-line-health-newtown-square' title='Main Line Health Center in Newtown Square' itemprop='url' >Main Line Health Newtown Square</a>                        </li>
+                    </ul>
+                </div>
+                <div class="footer__list footer__list--col1 ">
+                    <h5 class="footer__title">Education</h5>
+                    <ul>
+
+                            <li itemprop="name">
+<a href='/graduate-medical-education' title='Graduate Medical Education' itemprop='url' >Graduate Medical Education</a>                        </li>
+                            <li itemprop="name">
+<a href='/residency-programs' title='Residency Programs' itemprop='url' >Residency Programs</a>                        </li>
+                            <li itemprop="name">
+<a href='/fellowship-programs' title='Fellowship Programs' itemprop='url' >Fellowship Programs</a>                        </li>
+                            <li itemprop="name">
+<a href='/clerkships-electives' title='Clerkships &amp; Electives' itemprop='url' >Clerkships &amp; Electives</a>                        </li>
+                            <li itemprop="name">
+<a href='/cme' title='Continuing Medical Education' itemprop='url' >Continuing Medical Education</a>                        </li>
+                            <li itemprop="name">
+<a href='/careers/current-opportunities/summer-enrichment-program' title='Continuing Medical Education' itemprop='url' >Summer Enrichment Program</a>                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div> <!-- footer__content -->
+    <span class="footer__credits">
+        &copy; 2021 Main Line Health
+
+                | <a href='/about/policies/patient-privacy-policies' title=' HIPAA Privacy Notice' > HIPAA Privacy Notice</a><text>&nbsp;</text>
+                | <a href='/about/policies/terms-of-use' title='Terms of Use' >Terms of Use</a><text>&nbsp;</text>
+                | <a href='/about/policies/web-privacy-statement' title='Web Privacy Statement' >Web Privacy Statement</a><text>&nbsp;</text>
+                | <a href='/about/policies/patient-privacy-policies#nondiscrimination' title='Non-discrimination Notice' >Non-discrimination Notice</a><text>&nbsp;</text>
+                | <a href='/about/policies' title='More Policies' >More Policies</a><text>&nbsp;</text>
+    </span>
+</footer>
+        </div>
+    </div>
+    <div class="bg-overlay"></div>
+
+    <script src="/dist/js/libraries-generated.js"></script>
+    <script src="/dist/js/polyfill-generated.js"></script>
+    <script src="/dist/js/index-generated.js"></script>
+    <!--gSight //-->
+    <!--<script src="/gsight2/gsight.js"></script>//-->
+
+    <!-- NRC //-->
+    <script src="https://transparency.nrchealth.com/widget/v2/main-line-health/npi/lotw.js" async></script>
+
+
+
+
+
+</body>
+</html>
